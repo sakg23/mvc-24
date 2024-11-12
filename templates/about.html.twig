@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Om kursen{% endblock %}
+
+{% block body %}
+<h2>Om kursen MVC</h2>
+<div class="columns">
+    <div>
+        <p>I denna kurs lär vi oss att programmera webbapplikationer objektorienterat, med fokus på MVC-arkitekturen (Model-View-Controller). Vi använder Symfony som ramverk för att bygga en webbplats där vi skapar kontroller för funktionalitet och vyer för att rendera sidor. Kursen introducerar också JSON-sidor och RESTful API
+            , vilket ger en grund för att bygga webbtjänster. Utöver praktiska övningar får vi även en inblick i grunderna i objektorienterad programmering i PHP. Kursmomentet beräknas ta cirka 20 timmar, inklusive teori och praktiska uppgifter.</p>
+        <p><a href="https://github.com/dbwebb-se/mvc">Kursens Git-repo</a></p>
+    </div>
+    <div>
+        <p><a href="https://github.com/sakg23">Mitt GitHub-repo</a></p>
+        <img src="{{ asset('img/course.jpg') }}" alt="Bild som representerar kursen">
+    </div>
+</div>
+{% endblock %}

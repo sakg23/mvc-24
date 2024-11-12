@@ -1,0 +1,21 @@
+footer {
+    background-color: rgb(91, 125, 140); /* Matchande färg till bakgrund */
+    color: rgb(12, 12, 12); /* Textfärg för kontrast */
+    text-align: center;
+    padding: 1em 0;
+    border-top: 2px solid rgb(69, 96, 108); /* En mörkare nyans för avdelaren */
+    font-size: 0.9em;
+}
+
+footer a {
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline; /* En enkel hover-effekt */
+}
+
+footer p {
+    margin: 0.3em 0; /* Minskar marginaler för mer kompakt design */
+}
