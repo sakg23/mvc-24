@@ -1,12 +1,7 @@
-Here’s an example of a well-structured, informative, and visually appealing `README.md` file for your Symfony project. This example includes an introductory image, clear sections, and detailed instructions.
-
----
-
 ```markdown
 # My Symfony Project
 
-![Project Image](./public/img/course.jpg) 
-
+![alt text](image.png)
 ## Overview
 
 Welcome to **My Symfony Project**! This project is a web application built with Symfony, showcasing various routes, JSON responses, and a structured API landing page. It demonstrates Symfony's powerful routing, controller, and response features to create a flexible and responsive application.
