@@ -5,7 +5,7 @@ Here’s an example of a well-structured, informative, and visually appealing `R
 ```markdown
 # My Symfony Project
 
-![Project Image](./public/img/course.jpg) <!-- Replace with your image URL or path -->
+![Project Image](./public/img/course.jpg) 
 
 ## Overview
 
