@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Deck of Cards{% endblock %}
+
+{% block body %}
+<h1>Deck of Cards</h1>
+
+ <p>Cards in deck: {{ deck|length }}</p>
+
+<ul>
+    {% for card in deck %}
+        <li>{{ card }}</li>
+    {% endfor %}
+</ul>
+
+{{include('flash.html.twig') }}
+
+
+<a href="{{ path('card_init') }}">Back to Deck Overview</a>
+
+{% endblock %}

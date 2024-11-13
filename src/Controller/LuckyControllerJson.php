@@ -2,31 +2,21 @@
 
 namespace App\Controller;
 
+use App\Card\DeckOfCards;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
-class LuckyControllerJson
+class LuckyControllerJson extends AbstractController
 {
     #[Route("/api", name: "api_home")]
     public function apiHome(): Response
     {
-        $html = '
-            <html>
-                <body>
-                    <h1>API Overview</h1>
-                    <p>Welcome to the API landing page. Here are the available JSON routes:</p>
-                    <ul>
-                        <li><a href="/api/lucky/number">/api/lucky/number</a> - Returns a random lucky number in JSON format.</li>
-                        <li><a href="/api/quote">/api/quote</a> - Returns a quote of the day in JSON format.</li>
-                    </ul>
-                </body>
-            </html>
-        ';
-
-        return new Response($html);
+        return $this->render('api.html.twig');
     }
-
+    
     #[Route("/api/quote", name: "quote_json")]
     public function quote(): JsonResponse
     {
@@ -48,5 +38,77 @@ class LuckyControllerJson
         $response = new JsonResponse($data, JsonResponse::HTTP_OK, [], false);
         $response->setEncodingOptions(JSON_PRETTY_PRINT);
         return $response;
-            }
+    }
+
+    #[Route("/api/lucky/number", name: "lucky_json")]
+    public function lucky(): JsonResponse
+    {
+        $luckyNumber = random_int(1, 100);
+        $data = ['luckyNumber' => $luckyNumber];
+    
+        $response = new JsonResponse($data, JsonResponse::HTTP_OK, [], false);
+        $response->setEncodingOptions(JSON_PRETTY_PRINT);
+        return $response;
+    }
+
+    #[Route("/api/deck", name: "api_deck", methods: ["GET"])]
+    public function getDeck(SessionInterface $session): JsonResponse
+    {
+        $deck = $session->get('deck', new DeckOfCards());
+        $cards = $deck->getCards();
+            
+        return $this->json([
+            'deck' => $cards,
+            'count' => $deck->getCount()
+        ]);
+    }
+
+    #[Route("/api/deck/shuffle", name: "api_deck_shuffle", methods: ["POST"])]
+    public function shuffleDeck(SessionInterface $session): JsonResponse
+    {
+        $deck = new DeckOfCards();
+        $deck->shuffle();
+        $session->set('deck', $deck);
+
+        return $this->json([
+            'message' => 'Deck shuffled!',
+            'deck' => $deck->getCards(),
+            'count' => $deck->getCount()
+        ]);
+    }
+
+    #[Route("/api/deck/draw", name: "api_deck_draw_one", methods: ["POST"])]
+    public function drawOne(SessionInterface $session): JsonResponse
+    {
+        $deck = $session->get('deck', new DeckOfCards());
+
+        // Draw one card
+        $drawnCards = $deck->draw(1);
+        $session->set('deck', $deck);
+
+        return $this->json([
+            'drawn_cards' => $drawnCards,
+            'cards_left' => $deck->getCount()
+        ]);
+    }
+
+    #[Route("/api/card/deck/draw/{number<\d+>?1}", name: "api_deck_draw_multiple", methods: ["POST"])]
+    public function draw(SessionInterface $session, int $number = 1): JsonResponse
+    {
+        $deck = $session->get('deck');
+        $newDraw = $deck->draw($number);
+        
+        $drawnCards = $session->get('drawn_cards', []);
+        $drawnCards = array_merge($drawnCards, $newDraw);
+        
+        $session->set('deck', $deck);
+        $session->set('drawn_cards', $drawnCards);
+        
+        return $this->json([
+            'drawn_cards' => $drawnCards,
+            'cards_in_deck' => $deck->getCount()
+        ]);
+    }
+
 }
+

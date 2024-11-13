@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Drawn Cards{% endblock %}
+
+{% block body %}
+<h1>Drawn Cards</h1>
+<ul>
+    {% for card in drawn_cards %}
+        <li>{{ card }}</li>
+    {% endfor %}
+</ul>
+<p>Cards left in deck: {{ cards_in_deck }}</p>
+
+<form action="{{ path('card_draw') }}" method="post">
+    <button type="submit">Draw Another Card</button>
+</form>
+
+{{include('flash.html.twig') }}
+
+<a href="{{ path('card_init') }}">Back to Deck Overview</a>
+
+{% endblock %}

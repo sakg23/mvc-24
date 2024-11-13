@@ -62,6 +62,30 @@ body.lucky {
     animation: spin 4s linear infinite, bounce 2s infinite;
 }
 
+.die {
+    font-size: 3em;
+}
+
+.flash-notice {
+    padding: 0.5em;
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+.flash-notice:before {
+    content: "ⓘ";
+}
+
+.flash-warning {
+    padding: 0.5em;
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.flash-warning:before {
+    content: "⚠";
+}
+
 /* Keyframe animations */
 
 @keyframes color-change {
@@ -92,3 +116,6 @@ body.lucky {
     50% { transform: translateY(-20px); }
 }
 
+.uml {
+    width: 100%;
+}

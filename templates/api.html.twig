@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}API Landing Page{% endblock %}
+
+{% block body %}
+<h1>API Overview</h1>
+<p>Welcome to the API landing page. Here are the available JSON routes:</p>
+<ul>
+    <li><a href="/api/lucky/number">/api/lucky</a> - Returns a random lucky number in JSON format.</li>
+    <li><a href="/api/quote">/api/quote</a> - Returns a quote of the day in JSON format.</li>
+    <li><a href="/api/deck">/api/deck</a> - Returns a sorted deck of cards in JSON format.</li>
+
+    <!-- Form for shuffle deck (POST request) -->
+    <li>
+        <form action="/api/deck/shuffle" method="POST">
+            <label for="num_cards">Shuffles cards in JSON format:</label>
+            <button type="submit">Shuffle Deck</button>
+        </form>
+    </li>
+
+    <!-- Form for drawing one card (POST request) -->
+    <li>
+        <form action="/api/deck/draw" method="POST">
+            <label for="num_cards">Draws card in JSON format:</label>
+            <button type="submit">Draw One Card</button>
+        </form>
+    </li>
+
+    <!-- Form for drawing multiple cards (POST request with number input) -->
+    <li>
+        <form action="/api/deck/draw" method="POST">
+            <label for="num_cards">Draw Multiple Cards:</label>
+            <input type="number" id="num_cards" name="number" min="1" max="52" placeholder="1" required />
+            <button type="submit">Draw Cards</button>
+        </form>
+        
+    </li>
+</ul>
+{% endblock %}
