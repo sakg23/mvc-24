@@ -16,7 +16,7 @@ class LuckyControllerJson extends AbstractController
     {
         return $this->render('api.html.twig');
     }
-    
+
     #[Route("/api/quote", name: "quote_json")]
     public function quote(): JsonResponse
     {
@@ -45,7 +45,7 @@ class LuckyControllerJson extends AbstractController
     {
         $luckyNumber = random_int(1, 100);
         $data = ['luckyNumber' => $luckyNumber];
-    
+
         $response = new JsonResponse($data, JsonResponse::HTTP_OK, [], false);
         $response->setEncodingOptions(JSON_PRETTY_PRINT);
         return $response;
@@ -56,7 +56,7 @@ class LuckyControllerJson extends AbstractController
     {
         $deck = $session->get('deck', new DeckOfCards());
         $cards = $deck->getCards();
-            
+
         return $this->json([
             'deck' => $cards,
             'count' => $deck->getCount()
@@ -97,13 +97,13 @@ class LuckyControllerJson extends AbstractController
     {
         $deck = $session->get('deck');
         $newDraw = $deck->draw($number);
-        
+
         $drawnCards = $session->get('drawn_cards', []);
         $drawnCards = array_merge($drawnCards, $newDraw);
-        
+
         $session->set('deck', $deck);
         $session->set('drawn_cards', $drawnCards);
-        
+
         return $this->json([
             'drawn_cards' => $drawnCards,
             'cards_in_deck' => $deck->getCount()
@@ -111,4 +111,3 @@ class LuckyControllerJson extends AbstractController
     }
 
 }
-

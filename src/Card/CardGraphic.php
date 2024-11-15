@@ -31,8 +31,8 @@ class CardGraphic extends Card
     }
 
     public function __toString(): string
-{
-    return "[{$this->getAsString()}]";
-}
+    {
+        return "[{$this->getAsString()}]";
+    }
 
 }
