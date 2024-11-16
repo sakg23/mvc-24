@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use App\Card\Game;
@@ -16,10 +17,10 @@ class GameController extends AbstractController
     }
 
     #[Route("/game/doc", name: "game_doc")]
-public function documentation(): Response
-{
-    return $this->render('game/doc.html.twig');
-}
+    public function documentation(): Response
+    {
+        return $this->render('game/doc.html.twig');
+    }
 
     #[Route("/game/play", name: "game_play")]
     public function play(SessionInterface $session): Response
