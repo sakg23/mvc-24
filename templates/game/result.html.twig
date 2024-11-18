@@ -1,0 +1,15 @@
+ {% extends 'base.html.twig' %}
+
+{% block title %}Resultat{% endblock %}
+
+{% block body %}
+
+<h1>Resultat</h1>
+<p>Spelarens Hand: {{ player.getHand()|join(', ') }} ({{ player.getScore() }})</p>
+<p>Bankens Hand: {{ dealer.getHand()|join(', ') }} ({{ dealer.getScore() }})</p>
+<p>Vinnare: {{ winner }}</p>
+<a href="{{ path('game_reset') }}">Spela om</a>
+
+<div><a href="{{ path('game_home') }}">Tillbaks till huvudsidan</a></div>
+
+{% endblock %}

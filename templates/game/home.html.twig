@@ -1,0 +1,19 @@
+ {% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+<h1>Kortspel 21</h1>
+<p>
+Kortspel 21 är ett spännande spel där du som spelare möter banken, som styrs av datorn. Målet är att få ett sammanlagt kortvärde så nära 21 som möjligt, utan att gå över. Ess är värt 1 eller 14, klädda kort som kung, dam och knekt är värda 10, och de övriga korten har sitt siffervärde.
+
+Spelet börjar med att du får dra kort. Du kan välja att dra fler kort ("Hit") eller stanna ("Stand"). Om du går över 21 förlorar du automatiskt. När du stannar tar banken över och drar kort automatiskt tills banken når minst 17 eller överstiger 21. Banken ser aldrig din hand och spelar enligt fasta regler.
+
+Den som har högst poäng utan att gå över 21 vinner. Om poängen är lika vinner banken. En ny spelrunda kan startas direkt efter en avslutad omgång, och spelet är lika enkelt som utmanande. Lycka till!</p>
+
+<div><a href="{{ path('game_doc') }}">Speldokumentation</a></div>
+
+
+<a href="{{ path('game_play') }}">Börja spela</a>
+{% endblock %}

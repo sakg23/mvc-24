@@ -1,0 +1,14 @@
+ {% extends 'base.html.twig' %}
+
+{% block title %}Spel{% endblock %}
+
+{% block body %}
+
+<h1>Spelarens omgång</h1>
+<p>Din Hand: {{ player.getHand()|join(', ') }}</p>
+<p>Poäng: {{ player.getScore() }}</p>
+
+<a href="{{ path('game_hit') }}">Hit</a>
+<a href="{{ path('game_stand') }}">Stand</a>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dokumentation{% endblock %}
+
+{% block body %}
+<h1> Speldokumentation </h1>
+
+<h3> Flödeschema: </h3>
+    <img class = 'chart' src="{{ asset('img/flowchart.png') }}" alt="Flödesschema">
+
+<h3> Pseudokod: </h3>
+<pre>
+<code>
+# Initialize Game
+Initialize deck and shuffle
+Create Player and Dealer with empty hands
+
+# Player Turn
+While Player's turn is active:
+    Show player's current score
+    If Player chooses "Hit":
+        Draw card for Player
+        If Player's score > 21:
+            Player loses
+            End game
+    If Player chooses "Stand":
+        End Player's turn
+
+# Dealer Turn
+While Dealer's score < 17:
+    Draw card for Dealer
+    If Dealer's score > 21:
+        Dealer loses
+        End game
+
+# Determine Winner
+If Player's score > Dealer's score:
+    Player wins
+Else If Dealer's score > Player's score:
+    Dealer wins
+Else:
+    Dealer wins (on tie)
+</code>
+</pre>
+
+<h3> Spelklasser: </h3>
+<p> 
+För att implementera spelet återanvände vi flera klasser från tidigare arbete och skapade endast två nya klasser för att möta spelets krav. Klassen Card används för att representera ett spelkort med egenskaper som färg och värde. Den utökas av klassen CardGraphic, som lägger till symboler för att visuellt representera korten, såsom ♥ och ♠.
+
+Kortleken hanteras av DeckOfCards, som erbjuder funktionalitet för att blanda, dra kort och återställa leken. Dessa tre klasser var redan existerande och kunde återanvändas direkt i lösningen.
+
+Utöver dessa skapade vi två nya klasser. Player används för att representera både spelaren och banken, och håller reda på varje deltagares kort samt räknar ut deras poäng. Game ansvarar för att styra hela spelets logik, inklusive att hantera turordning, dra kort, och avgöra vinnaren baserat på poäng.
+
+Genom att återanvända befintliga klasser och endast lägga till de två som behövdes höll vi koden enkel, modulär och lätt att underhålla.
+</p>
+
+
+{% endblock %}
