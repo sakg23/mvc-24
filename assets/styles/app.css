@@ -116,6 +116,6 @@ body.lucky {
     50% { transform: translateY(-20px); }
 }
 
-.uml {
+.uml, .chart {
     width: 100%;
 }
