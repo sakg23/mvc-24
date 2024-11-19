@@ -62,25 +62,23 @@ class DiceGameController extends AbstractController
         if ($num > 99) {
             throw new \Exception("Can not roll more than 99 dices!");
         }
-
+    
         $hand = new DiceHand();
         for ($i = 1; $i <= $num; $i++) {
-            if ($i % 2 === 1) {
-                $hand->add(new DiceGraphic());
-            } else {
-                $hand->add(new Dice());
-            }
+            $die = ($i % 2 === 1) ? new DiceGraphic() : new Dice();
+            $hand->add($die);
         }
-
+    
         $hand->roll();
-
+    
         $data = [
             "num_dices" => $hand->getNumberDices(),
             "diceRoll" => $hand->getString(),
         ];
-
+    
         return $this->render('pig/test/dicehand.html.twig', $data);
     }
+    
 
     #[Route("/game/pig/init", name: "pig_init_get", methods: ['GET'])]
     public function init(): Response

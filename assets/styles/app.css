@@ -119,3 +119,29 @@ body.lucky {
 .uml, .chart {
     width: 100%;
 }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff; /* Text color */
+    background-color: #4CAF50; /* Background color (green) */
+    border: 2px solid #3e8e41; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    margin: 5px; /* Spacing between buttons */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.button:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+    color: #ffffff; /* Keep text white */
+    border-color: #4CAF50; /* Reverse border color on hover */
+}
+
+.button:active {
+    background-color: #367c39; /* Even darker on click */
+    border-color: #2d6c32;
+}
