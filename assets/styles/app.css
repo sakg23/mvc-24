@@ -128,20 +128,45 @@ body.lucky {
     text-align: center;
     text-decoration: none;
     color: #fff; /* Text color */
-    background-color: #4CAF50; /* Background color (green) */
-    border: 2px solid #3e8e41; /* Border color */
+    background-color: #4ca0af; /* Background color (green) */
+    border: 2px solid #45606c; /* Border color */
     border-radius: 5px; /* Rounded corners */
     margin: 5px; /* Spacing between buttons */
     transition: all 0.3s ease; /* Smooth hover effect */
 }
 
 .button:hover {
-    background-color: #3e8e41; /* Darker green on hover */
+    background-color: #4b7588;/* Darker green on hover */
     color: #ffffff; /* Keep text white */
-    border-color: #4CAF50; /* Reverse border color on hover */
+    border-color: #45606c; /* Reverse border color on hover */
 }
 
 .button:active {
-    background-color: #367c39; /* Even darker on click */
-    border-color: #2d6c32;
+    background-color: #4b7588; /* Even darker on click */
+    border-color: #45606c;
+}
+
+
+.simple-button {
+    display: inline-block;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    border: 2px;
+    color: #ffffff; /* White text */
+    background-color: #585b5e; /* Primary blue color */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.simple-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    text-decoration: none; /* Ensure no underline on hover */
+    border-color: #45606c;
+}
+
+.simple-button:active {
+    background-color: #003f7f; /* Even darker blue on click */
+    border-color: #45606c;
 }
