@@ -8,8 +8,8 @@
 <p>Spelarens Hand: {{ player.getHand()|join(', ') }} ({{ player.getScore() }})</p>
 <p>Bankens Hand: {{ dealer.getHand()|join(', ') }} ({{ dealer.getScore() }})</p>
 <p>Vinnare: {{ winner }}</p>
-<a href="{{ path('game_reset') }}">Spela om</a>
+<a href="{{ path('game_reset') }}"class="button">Spela om</a>
 
-<div><a href="{{ path('game_home') }}">Tillbaks till huvudsidan</a></div>
+<div><a href="{{ path('game_home') }}"class="button">Tillbaks till huvudsidan</a></div>
 
 {% endblock %}
