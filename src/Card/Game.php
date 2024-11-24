@@ -12,8 +12,8 @@ class Game
     {
         $this->deck = new DeckOfCards();
         $this->deck->shuffle();
-        $this->player = new Player("Player");
-        $this->dealer = new Player("Dealer", true);
+        $this->player = new Player();
+        $this->dealer = new Player();
     }
 
     public function dealToPlayer(): CardGraphic

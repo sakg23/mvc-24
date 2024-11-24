@@ -4,15 +4,7 @@ namespace App\Card;
 
 class Player
 {
-    private string $name;
     private array $hand = []; // Cards in the player's hand
-    private bool $isDealer;
-
-    public function __construct(string $name, bool $isDealer = false)
-    {
-        $this->name = $name;
-        $this->isDealer = $isDealer;
-    }
 
     public function addCard(CardGraphic $card): void
     {
@@ -34,11 +26,15 @@ class Player
             if ($value === 1) { // Ace
                 $aces++;
                 $score += 14; // Default high value for Ace
-            } elseif ($value > 10) { // Face cards (J, Q, K)
-                $score += 10;
-            } else {
-                $score += $value;
+                continue;
             }
+
+            if ($value > 10) { // Face cards (J, Q, K)
+                $score += 10;
+                continue;
+            }
+
+            $score += $value;
         }
 
         // Adjust for Aces if score exceeds 21
@@ -50,13 +46,15 @@ class Player
         return $score;
     }
 
-    public function isDealer(): bool
-    {
-        return $this->isDealer;
-    }
-
     public function resetHand(): void
     {
         $this->hand = [];
+    }
+}
+
+class Dealer extends Player
+{
+    public function __construct()
+    {
     }
 }
