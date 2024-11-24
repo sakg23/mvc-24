@@ -70,13 +70,19 @@ class GameController extends AbstractController
         $playerScore = $game->getPlayer()->getScore();
         $dealerScore = $game->getDealer()->getScore();
 
-        $winner = "It's a tie!";
+        $winner = "";
+
+        // Apply the new rules
         if ($playerScore > 21) {
-            $winner = "Dealer wins!";
-        } elseif ($dealerScore > 21 || $playerScore > $dealerScore) {
-            $winner = "Player wins!";
-        } elseif ($dealerScore > $playerScore) {
-            $winner = "Dealer wins!";
+            $winner = "Banken vinner! Du gick över 21.";
+        } elseif ($dealerScore > 21) {
+            $winner = "Du vinner! Banken gick över 21.";
+        } elseif ($playerScore > $dealerScore) {
+            $winner = "Du vinner!";
+        } elseif ($playerScore < $dealerScore) {
+            $winner = "Banken vinner!";
+        } else {
+            $winner = "Banken vinner! (oavgjort)";
         }
 
         return $this->render('game/result.html.twig', [
@@ -85,6 +91,7 @@ class GameController extends AbstractController
             'winner' => $winner,
         ]);
     }
+
 
     #[Route("/game/reset", name: "game_reset")]
     public function reset(SessionInterface $session): Response
