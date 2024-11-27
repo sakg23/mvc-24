@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Update{% endblock %}
+
+{% block body %}
+
+<h1>Edit Book</h1>
+<form method="post">
+    <input type="text" name="title" value="{{ book.title }}">
+    <input type="text" name="isbn" value="{{ book.isbn }}">
+    <input type="text" name="author" value="{{ book.author }}">
+    <input type="text" name="image" value="{{ book.image }}">
+    <button type="submit">Save Changes</button>
+</form>
+
+{% endblock %}
