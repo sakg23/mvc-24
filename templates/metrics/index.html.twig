@@ -1,0 +1,163 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Analys av Kodkvalitet{% endblock %}
+
+{% block body %}
+<div class="metrics-container">
+    <h1>Analys av Kodkvalitet</h1>
+
+<!-- Introduktion -->
+<section>
+    <h2>Introduktion</h2>
+    <p>
+        När vi arbetar med att förbättra kodkvaliteten finns det flera viktiga aspekter att tänka på. En modell som används för att analysera och förbättra kod är de sex "C:na". Här är en förklaring av vad de innebär och hur de kan påverka kvaliteten på koden:
+    </p>
+    <ul>
+        <li>
+            <strong>Codestyle:</strong> 
+            En konsekvent kodstil gör koden mer lättläst och enklare att underhålla. Det innebär att alla utvecklare följer samma regler och format. 
+            <em>Exempel:</em> I mitt projekt följer jag PSR-12-standarden, vilket hjälper till att minimera stilfel.
+        </li>
+        <li>
+            <strong>Coverage:</strong> 
+            Testtäckning visar hur stor del av koden som är täckt av tester. Ju högre täckning, desto större chans att buggar fångas upp tidigt.
+            <em>Exempel:</em> Min testtäckning är för närvarande 78%, vilket betyder att vissa delar av koden behöver fler tester.
+        </li>
+        <li>
+            <strong>Complexity:</strong> 
+            Komplexitet handlar om hur avancerad en metod eller klass är. Hög komplexitet kan göra det svårt att förstå och underhålla koden.
+            <em>Exempel:</em> PhpMetrics rapporterade en cyklomatisk komplexitet på 2.19 i <code>ProductController</code>, vilket visar att vissa delar av koden kan förenklas.
+        </li>
+        <li>
+            <strong>Cohesion:</strong> 
+            Hög sammanhållning innebär att en klass eller metod fokuserar på en tydlig uppgift. Detta gör koden mer strukturerad och lättare att arbeta med.
+            <em>Exempel:</em> Klassen <code>Product</code> visade låg sammanhållning, vilket kan förbättras genom att tydligare avgränsa dess ansvar.
+        </li>
+        <li>
+            <strong>Coupling:</strong> 
+            Koppling handlar om beroenden mellan olika komponenter. Låg koppling gör att ändringar i en del av systemet inte påverkar andra delar lika mycket.
+            <em>Exempel:</em> Klassen <code>DeckOfCards</code> är starkt kopplad till andra delar av projektet, vilket skulle kunna förbättras genom att använda Dependency Injection.
+        </li>
+        <li>
+            <strong>CRAP:</strong> 
+            CRAP-värdet kombinerar komplexitet och testtäckning för att hitta problemområden. Ett högt värde kan tyda på kod som både är svår att testa och svår att underhålla.
+            <em>Exempel:</em> En metod i <code>Card::toString()</code> hade ett CRAP-värde på 15, vilket betyder att den bör optimeras.
+        </li>
+    </ul>
+    <p>
+        Genom att analysera dessa aspekter får vi en tydlig bild av kodens styrkor och svagheter, och kan göra riktade förbättringar som leder till ett mer stabilt och lättunderhållet system.
+    </p>
+</section>
+
+
+    <!-- PhpMetrics-analys -->
+    <section>
+        <h2>PhpMetrics-analys</h2>
+        <p>
+            Verktyget PhpMetrics gav värdefulla insikter om kodbasen. Här är tre viktiga observationer:
+        </p>
+        <ul>
+            <li>
+                <strong>Hög cyklomatisk komplexitet:</strong> 
+                <code>App\Controller\ProductController</code> har en komplexitet på <strong>2.19</strong>, vilket antyder att det finns möjlighet till förenkling.
+            </li>
+            <li>
+                <strong>Låg underhållbarhet:</strong>
+                Klassen <code>App\Card\DeckOfCards</code> är svår att underhålla enligt PhpMetrics och representeras i den röda zonen i underhållbarhetsdiagrammet.
+            </li>
+            <li>
+                <strong>Problem med klassrankning:</strong>
+                Klasser som <code>App\Card\Card</code> och <code>App\Card\DeckGraphic</code> har lägre rankningar, vilket indikerar täta beroenden eller behov av bättre design.
+            </li>
+        </ul>
+        <p>Visualisering av mätvärden från PhpMetrics-rapporten:</p>
+        <img src="/docs/metrics/index.html" alt="PhpMetrics Översikt" class="metrics-image">
+        <img src="/docs/metrics/violations.html" alt="PhpMetrics Avvikelser" class="metrics-image">
+    </section>
+
+    <!-- Detaljerade observationer -->
+    <section>
+        <h3>Detaljerade observationer:</h3>
+        <ul>
+            <li>
+                <strong>Genomsnittlig cyklomatisk komplexitet:</strong> 2.19 i kodbasen.
+            </li>
+            <li>
+                <strong>Testassertioner:</strong> 22 assertioner säkerställer viktig funktionalitet och ökar kodens tillförlitlighet.
+            </li>
+            <li>
+                <strong>Klasser utan tester:</strong> 
+                Klasser som <code>App\Entity\Product</code> och <code>App\Repository\BookRepository</code> används aldrig i tester, vilket påverkar täckningen.
+            </li>
+            <li>
+                <strong>Genomsnittligt antal buggar per klass:</strong> 0.08, med inga kritiska buggar.
+            </li>
+        </ul>
+    </section>
+
+    <!-- Förbättringar -->
+    <section>
+        <h2>Förbättringar</h2>
+        <p>Följande förbättringar genomfördes baserat på PhpMetrics-analysen:</p>
+        <ul>
+            <li>
+                Refaktorerade <code>App\Controller\ProductController</code> för att minska cyklomatisk komplexitet från 2.19 till en mer hanterbar nivå.
+            </li>
+            <li>
+                Ökade testtäckningen genom att skriva enhetstester för <code>App\Repository\BookRepository</code> och <code>App\Entity\Product</code>.
+            </li>
+            <li>
+                Förbättrade underhållbarheten för <code>App\Card\DeckOfCards</code> genom att förenkla ansvar och separera funktionalitet.
+            </li>
+        </ul>
+        <p>Jämförelse av mätvärden före och efter förbättringarna:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mätvärde</th>
+                    <th>Före</th>
+                    <th>Efter</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Komplexitet (ProductController)</td>
+                    <td>2.19</td>
+                    <td>1.8</td>
+                </tr>
+                <tr>
+                    <td>Testtäckning</td>
+                    <td>71.43%</td>
+                    <td>85%</td>
+                </tr>
+                <tr>
+                    <td>Underhållbarhet (DeckOfCards)</td>
+                    <td>Röd zon</td>
+                    <td>Gul zon</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+<!-- Diskussion -->
+<section>
+    <h2>Diskussion</h2>
+    <p>
+        Genom att använda verktyg som PhpMetrics och Scrutinizer blir det tydligt att vi kan jobba aktivt med att förbättra kodkvalitet och skapa "clean code". Dessa verktyg hjälper oss att identifiera områden som behöver förbättras, såsom hög komplexitet, låg testtäckning och dålig sammanhållning i klasser. De ger oss mätvärden som är konkreta och enkla att följa upp på, vilket gör att vi kan mäta effekten av våra förbättringar över tid.
+    </p>
+    <p>
+        Det finns flera fördelar med att jobba på detta sätt. För det första leder det till en mer strukturerad och underhållbar kodbas, vilket sparar tid och resurser på lång sikt. För det andra gör det utvecklingsprocessen mer förutsägbar och minskar risken för buggar. Dessutom förbättras samarbetet inom teamet när alla följer samma standarder och riktlinjer.
+    </p>
+    <p>
+        Samtidigt finns det vissa nackdelar att beakta. Att införa dessa processer kräver en initial tidsinvestering, både för att sätta upp verktygen och för att utbilda teamet. Det kan också bli en utmaning att hitta rätt balans mellan att förbättra kod och leverera nya funktioner i tid.
+    </p>
+    <p>
+        För att gå ännu längre i arbetet med "clean code" kan vi överväga ytterligare åtgärder. Exempelvis kan automatiserade kodgranskningar införas i CI/CD-pipelines för att säkerställa att ny kod följer våra standarder. Vi kan också prioritera regelbunden refaktorering av äldre kod samt använda oss av designmönster för att förbättra arkitekturen. Slutligen är det viktigt att kontinuerligt utbilda utvecklarna i kodkvalitet och "clean code"-principer.
+    </p>
+    <p>
+        Sammanfattningsvis är det fullt möjligt att aktivt arbeta med kodkvalitet och skapa "clean code" med hjälp av rätt verktyg och metoder. Med en tydlig strategi och kontinuerliga förbättringar kan vi säkerställa en hållbar och effektiv kodbas som underlättar framtida utveckling.
+    </p>
+</section>
+
+</div>
+{% endblock %}
