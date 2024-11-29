@@ -8,25 +8,28 @@ use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
 
 /**
- * Auto-generated Migration: Please modify to your needs!
+ * Migration to create the "book" table with necessary constraints.
  */
 final class Version20241125173107 extends AbstractMigration
 {
     public function getDescription(): string
     {
-        return '';
+        return 'Creates the "book" table with a unique ISBN constraint.';
     }
 
     public function up(Schema $schema): void
+        // @phpmd-ignore-next-line
     {
-        // this up() migration is auto-generated, please modify it to your needs
+        // Creates the "book" table
         $this->addSql('CREATE TABLE book (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, title VARCHAR(255) NOT NULL, isbn VARCHAR(13) NOT NULL, author VARCHAR(255) NOT NULL, image VARCHAR(255) NOT NULL)');
         $this->addSql('CREATE UNIQUE INDEX UNIQ_CBE5A331CC1CF4E6 ON book (isbn)');
     }
 
     public function down(Schema $schema): void
+        // @phpmd-ignore-next-line
+
     {
-        // this down() migration is auto-generated, please modify it to your needs
+        // Drops the "book" table
         $this->addSql('DROP TABLE book');
     }
 }
