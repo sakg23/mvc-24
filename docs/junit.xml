@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="13" assertions="22" errors="0" warnings="0" failures="0" skipped="0" time="0.077163">
+    <testsuite name="Project Test Suite" tests="13" assertions="22" errors="0" warnings="0" failures="0" skipped="0" time="0.077163">
+      <testsuite name="App\Tests\Card\CardGraphicTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/CardGraphicTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.027654">
+        <testcase name="testCardGraphicToString" class="App\Tests\Card\CardGraphicTest" classname="App.Tests.Card.CardGraphicTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/CardGraphicTest.php" line="10" assertions="2" time="0.027654"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\CardTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/CardTest.php" tests="2" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.001137">
+        <testcase name="testCardInitialization" class="App\Tests\Card\CardTest" classname="App.Tests.Card.CardTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/CardTest.php" line="10" assertions="2" time="0.000545"/>
+        <testcase name="testCardToString" class="App\Tests\Card\CardTest" classname="App.Tests.Card.CardTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/CardTest.php" line="17" assertions="2" time="0.000592"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\DeckOfCardsTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/DeckOfCardsTest.php" tests="3" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.038185">
+        <testcase name="testDeckInitialization" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/DeckOfCardsTest.php" line="10" assertions="1" time="0.002403"/>
+        <testcase name="testDeckShuffle" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/DeckOfCardsTest.php" line="16" assertions="1" time="0.035018"/>
+        <testcase name="testDeckDraw" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/DeckOfCardsTest.php" line="24" assertions="2" time="0.000764"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\GameTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/GameTest.php" tests="3" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.006512">
+        <testcase name="testGameInitialization" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/GameTest.php" line="10" assertions="3" time="0.003326"/>
+        <testcase name="testDealToPlayer" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/GameTest.php" line="20" assertions="2" time="0.000778"/>
+        <testcase name="testDealerTurn" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/GameTest.php" line="32" assertions="2" time="0.002407"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\PlayerTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/PlayerTest.php" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.001583">
+        <testcase name="testPlayerScore" class="App\Tests\Card\PlayerTest" classname="App.Tests.Card.PlayerTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/PlayerTest.php" line="11" assertions="1" time="0.000545"/>
+        <testcase name="testPlayerScoreWithAceAdjustment" class="App\Tests\Card\PlayerTest" classname="App.Tests.Card.PlayerTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/PlayerTest.php" line="19" assertions="1" time="0.000557"/>
+        <testcase name="testResetHand" class="App\Tests\Card\PlayerTest" classname="App.Tests.Card.PlayerTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Card/PlayerTest.php" line="28" assertions="1" time="0.000480"/>
+      </testsuite>
+      <testsuite name="App\Dice\DiceTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Dice/DiceTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.002092">
+        <testcase name="testCreateDice" class="App\Dice\DiceTest" classname="App.Dice.DiceTest" file="/home/ld2001/mvc-sam/kmom06/mvc-24/tests/Dice/DiceTest.php" line="16" assertions="2" time="0.002092"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

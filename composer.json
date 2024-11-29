@@ -90,10 +90,11 @@
         ],
         "csfix": "tools/php-cs-fixer/vendor/bin/php-cs-fixer --config=tools/php-cs-fixer/.php-cs-fixer.dist.php fix src tests",
         "csfix:dry": "tools/php-cs-fixer/vendor/bin/php-cs-fixer --config=tools/php-cs-fixer/.php-cs-fixer.dist.php fix src tests --dry-run -v", 
-        "phpmd": "tools/phpmd/vendor/bin/phpmd . text tools/phpmd/phpmd.xml || true",
-        "phpstan": "tools/phpstan/vendor/bin/phpstan analyse -c tools/phpstan/phpstan.neon || true",
+        "phpmd": "vendor/bin/phpmd . text tools/phpmd/phpmd.xml || true",
+        "phpstan": "vendor/bin/phpstan analyse -c tools/phpstan/phpstan.neon || true",
         "phpunit": "XDEBUG_MODE=coverage vendor/bin/phpunit",
         "phpdoc": "tools/phpdoc/phpdoc --config=tools/phpdoc/phpdoc.xml",
+        "phpmetrics": "tools/phpmetrics/vendor/bin/phpmetrics --config=tools/phpmetrics/phpmetrics.json",
         "lint": [
             "@phpmd",
             "@phpstan"
@@ -110,6 +111,8 @@
         }
     },
     "require-dev": {
+        "phpmd/phpmd": "^2.15",
+        "phpstan/phpstan": "^2.0",
         "phpunit/phpunit": "^9.5",
         "symfony/browser-kit": "7.0.*",
         "symfony/css-selector": "7.0.*",
