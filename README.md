@@ -6,7 +6,6 @@
 [![Build Status](https://scrutinizer-ci.com/g/sakg23/mvc-24/badges/build.png?b=main)](https://scrutinizer-ci.com/g/sakg23/mvc-24/?branch=main)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/sakg23/mvc-24/badges/code-intelligence.svg?b=main)](https://scrutinizer-ci.com/g/sakg23/mvc-24/?branch=main)
 
-![alt text](image.png)
 ## Overview
 
 Welcome to **My Symfony Project**! This project is a web application built with Symfony, showcasing various routes, JSON responses, and a structured API landing page. It demonstrates Symfony's powerful routing, controller, and response features to create a flexible and responsive application.
