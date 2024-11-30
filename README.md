@@ -26,8 +26,6 @@ Welcome to **My Symfony Project**! This project is a web application built with 
 
 ## Features
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sakg23/mvc-24/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/sakg23/mvc-24/?branch=main)
-
 - **Dynamic JSON Routes**: Provides JSON responses for various routes, including random numbers and quotes.
 - **API Landing Page**: A dedicated landing page for API routes, with links and descriptions of available endpoints.
 - **Random Quotes API**: Returns a quote of the day with the current date and timestamp.
