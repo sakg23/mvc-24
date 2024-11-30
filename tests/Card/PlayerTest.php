@@ -32,4 +32,5 @@ class PlayerTest extends TestCase
         $player->resetHand();
         $this->assertCount(0, $player->getHand());
     }
+
 }

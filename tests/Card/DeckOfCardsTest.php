@@ -28,4 +28,12 @@ class DeckOfCardsTest extends TestCase
         $this->assertCount(2, $drawnCards);
         $this->assertCount(50, $deck->getCards());
     }
+
+    public function testDeckDrawMoreThanAvailable(): void {
+        $deck = new DeckOfCards();
+        $drawnCards = $deck->draw(60); // Draw more than 52
+        $this->assertCount(52, $drawnCards); // Assert all cards are drawn
+        $this->assertEmpty($deck->getCards()); // Assert deck is empty
+    }
+    
 }
