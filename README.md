@@ -1,13 +1,11 @@
 ```markdown
 # My Symfony Project
 
-https://scrutinizer-ci.com/g/sakg23/mvc-24/badges/quality-score.png?b=main
-
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sakg23/mvc-24/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/sakg23/mvc-24/?branch=main)
 [![Code Coverage](https://scrutinizer-ci.com/g/sakg23/mvc-24/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/sakg23/mvc-24/?branch=main)
-
 [![Build Status](https://scrutinizer-ci.com/g/sakg23/mvc-24/badges/build.png?b=main)](https://scrutinizer-ci.com/g/sakg23/mvc-24/?branch=main)
-
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/sakg23/mvc-24/badges/code-intelligence.svg?b=main)](https://scrutinizer-ci.com/g/sakg23/mvc-24/?branch=main)
+
 
 ## Overview
 
