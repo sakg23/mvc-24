@@ -98,12 +98,12 @@ The application provides the following routes:
 - `/api` - **API Landing Page**: Displays a summary of available JSON routes on this site.
 - `/api/lucky/number` - **Lucky Number**: Returns a random lucky number in JSON format.
 - `/api/quote` - **Quote of the Day**: Returns a random quote with the current date and timestamp in JSON format.
-- **/card** - Card Game Home: Shows the current number of cards in the deck.
-- **/card/deck** - Deck of Cards: Displays all the cards in the deck, sorted by suit and value.
-- **/card/deck/shuffle** - Shuffle Deck: Shuffles the deck and displays it.
-- **/card/deck/draw/{number}** - Draw Cards: Draws a specified number of cards from the deck.
-- **/card/session** - Session Overview: Displays the current session data, including the deck and drawn cards.
-- **/card/session/delete** - Clear Session: Clears the session, including the deck.
+- `/card` - Card Game Home: Shows the current number of cards in the deck.
+- `/card/deck` - Deck of Cards: Displays all the cards in the deck, sorted by suit and value.
+- `card/deck/shuffle`- Shuffle Deck: Shuffles the deck and displays it.
+- `card/deck/draw/{number}`- Draw Cards: Draws a specified number of cards from the deck.
+- `card/session`- Session Overview: Displays the current session data, including the deck and drawn cards.
+- `card/session/delete`- Clear Session: Clears the session, including the deck.
 
 
 ## Project Structure
