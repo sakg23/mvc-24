@@ -1,0 +1,30 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Om Projektet{% endblock %}
+
+{% block body %}
+    <div class="about-page">
+        <h1 class="about-title">Om Projektet: Hantering av Transaktioner</h1>
+        <p class="about-description">
+            Detta projekt är utvecklat för att hantera finansiella transaktioner. Applikationen låter användare
+            skapa, visa, redigera och ta bort transaktioner på ett enkelt och effektivt sätt. Projektet är byggt med Symfony-ramverket
+            och följer MVC-arkitekturen.
+        </p>
+        <h2 class="section-title">Funktioner</h2>
+        <ul class="feature-list">
+            <li>Skapa nya transaktioner med detaljer som typ, belopp, kategori, beskrivning och datum.</li>
+            <li>Visa en lista över alla transaktioner.</li>
+            <li>Redigera befintliga transaktioner.</li>
+            <li>Ta bort transaktioner när de inte längre behövs.</li>
+        </ul>
+        <h2 class="section-title">Teknologier</h2>
+        <ul class="tech-list">
+            <li><strong>Backend:</strong> Symfony Framework</li>
+            <li><strong>Databas:</strong> SQLite</li>
+            <li><strong>Frontend:</strong> Twig-mallar och Bootstrap</li>
+        </ul>
+        <p class="flexible-design">
+            Projektet är modulärt och flexibelt, vilket gör det enkelt att lägga till nya funktioner eller integrera med andra system.
+        </p>
+    </div>
+{% endblock %}

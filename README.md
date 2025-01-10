@@ -21,14 +21,17 @@ Welcome to **My Symfony Project**! This project is a web application built with 
 - [Running the Application](#running-the-application)
 - [Available Routes](#available-routes)
 - [Project Structure](#project-structure)
+- [Card Game Implementation](#card-game-implementation)
 - [License](#license)
 
 ## Features
 
-- **Dynamic JSON Routes**: Provides JSON responses for various routes, including random numbers and quotes.
 - **API Landing Page**: A dedicated landing page for API routes, with links and descriptions of available endpoints.
-- **Random Quotes API**: Returns a quote of the day with the current date and timestamp.
 - **Extensible Structure**: Easy to add more routes and functionality as needed.
+- **Card Game**: An interactive card game with object-oriented PHP classes like `Card`, `CardGraphic`, and `DeckOfCards`, implemented in Symfony.
+  - **Deck Management**: View, shuffle, draw, and deal cards.
+  - **Session Management**: Keep track of the current deck and drawn cards in user sessions.
+  - **UML Class Diagram**: Visual representation of the card game system.
 
 ## Getting Started
 
@@ -81,20 +84,27 @@ symfony serve
 If you're not using Symfony CLI, you can also use PHP’s built-in server:
 
 ```bash
-php -S 127.0.0.1:8000 -t public
+php -S localhost:8000 -t public
 ```
 
-Once the server is running, open your browser and go to [http://127.0.0.1:8000](http://127.0.0.1:8000).
+Once the server is running, open your browser and go to [http://localhost:8000](http://localhost:8000).
 
 ## Available Routes
 
 The application provides the following routes:
 
+- `/` or `/home` - **Home Page**: Renders the homepage with links to explore the site.
+- `/about` - **About Page**: A simple "About" page with project information.
 - `/api` - **API Landing Page**: Displays a summary of available JSON routes on this site.
 - `/api/lucky/number` - **Lucky Number**: Returns a random lucky number in JSON format.
 - `/api/quote` - **Quote of the Day**: Returns a random quote with the current date and timestamp in JSON format.
-- `/` or `/home` - **Home Page**: Renders the homepage with links to explore the site.
-- `/about` - **About Page**: A simple "About" page with project information.
+- **/card** - Card Game Home: Shows the current number of cards in the deck.
+- **/card/deck** - Deck of Cards: Displays all the cards in the deck, sorted by suit and value.
+- **/card/deck/shuffle** - Shuffle Deck: Shuffles the deck and displays it.
+- **/card/deck/draw/{number}** - Draw Cards: Draws a specified number of cards from the deck.
+- **/card/session** - Session Overview: Displays the current session data, including the deck and drawn cards.
+- **/card/session/delete** - Clear Session: Clears the session, including the deck.
+
 
 ## Project Structure
 
@@ -104,6 +114,27 @@ This project follows a standard Symfony structure with the following key folders
 - `templates/`: Stores Twig templates for rendering HTML pages.
 - `config/`: Contains configuration files, including routes and services.
 - `public/`: The document root for the server, where the front controller (`index.php`) is located.
+
+# Card Game Implementation
+
+The card game system is built using object-oriented PHP, with the following classes:
+
+## Card Class
+- Represents a single card in the deck.
+- Contains properties for suit and value.
+- Includes methods to retrieve the suit and value and a string representation of the card.
+
+## CardGraphic Class (inherits from Card)
+- Extends the Card class.
+- Provides a graphical representation of the card as a string (e.g., A♠ for Ace of Spades).
+
+## DeckOfCards Class
+- Represents the entire deck of cards.
+- Provides methods to shuffle the deck, draw cards, and reset the deck.
+- Cards are stored in an array, and the deck is shuffled using PHP's built-in shuffle function.
+
+## Controller and Routes
+The game is managed
 
 ## License
 

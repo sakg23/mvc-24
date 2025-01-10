@@ -431,6 +431,41 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-ProjectController.html#method_about"
         },                {
+            "fqsen": "\\App\\Controller\\TransactionController",
+            "name": "TransactionController",
+            "summary": "",
+            "url": "classes/App-Controller-TransactionController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\TransactionController\u003A\u003Ahome\u0028\u0029",
+            "name": "home",
+            "summary": "",
+            "url": "classes/App-Controller-TransactionController.html#method_home"
+        },                {
+            "fqsen": "\\App\\Controller\\TransactionController\u003A\u003Aabout\u0028\u0029",
+            "name": "about",
+            "summary": "",
+            "url": "classes/App-Controller-TransactionController.html#method_about"
+        },                {
+            "fqsen": "\\App\\Controller\\TransactionController\u003A\u003Anew\u0028\u0029",
+            "name": "new",
+            "summary": "",
+            "url": "classes/App-Controller-TransactionController.html#method_new"
+        },                {
+            "fqsen": "\\App\\Controller\\TransactionController\u003A\u003Aedit\u0028\u0029",
+            "name": "edit",
+            "summary": "",
+            "url": "classes/App-Controller-TransactionController.html#method_edit"
+        },                {
+            "fqsen": "\\App\\Controller\\TransactionController\u003A\u003Adelete\u0028\u0029",
+            "name": "delete",
+            "summary": "",
+            "url": "classes/App-Controller-TransactionController.html#method_delete"
+        },                {
+            "fqsen": "\\App\\Controller\\TransactionController\u003A\u003Aaverages\u0028\u0029",
+            "name": "averages",
+            "summary": "",
+            "url": "classes/App-Controller-TransactionController.html#method_averages"
+        },                {
             "fqsen": "\\App\\Dice\\Dice",
             "name": "Dice",
             "summary": "",
@@ -591,6 +626,111 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Book.html#property_image"
         },                {
+            "fqsen": "\\App\\Entity\\Transaction",
+            "name": "Transaction",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003AgetType\u0028\u0029",
+            "name": "getType",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#method_getType"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003AsetType\u0028\u0029",
+            "name": "setType",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#method_setType"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003AgetAmount\u0028\u0029",
+            "name": "getAmount",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#method_getAmount"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003AsetAmount\u0028\u0029",
+            "name": "setAmount",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#method_setAmount"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003AgetCategory\u0028\u0029",
+            "name": "getCategory",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#method_getCategory"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003AsetCategory\u0028\u0029",
+            "name": "setCategory",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#method_setCategory"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003AgetDescription\u0028\u0029",
+            "name": "getDescription",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#method_getDescription"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003AsetDescription\u0028\u0029",
+            "name": "setDescription",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#method_setDescription"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003AgetDate\u0028\u0029",
+            "name": "getDate",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#method_getDate"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003AsetDate\u0028\u0029",
+            "name": "setDate",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#method_setDate"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003A\u0024type",
+            "name": "type",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#property_type"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003A\u0024amount",
+            "name": "amount",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#property_amount"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003A\u0024category",
+            "name": "category",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#property_category"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003A\u0024description",
+            "name": "description",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#property_description"
+        },                {
+            "fqsen": "\\App\\Entity\\Transaction\u003A\u003A\u0024date",
+            "name": "date",
+            "summary": "",
+            "url": "classes/App-Entity-Transaction.html#property_date"
+        },                {
+            "fqsen": "\\App\\Form\\TransactionType",
+            "name": "TransactionType",
+            "summary": "",
+            "url": "classes/App-Form-TransactionType.html"
+        },                {
+            "fqsen": "\\App\\Form\\TransactionType\u003A\u003AbuildForm\u0028\u0029",
+            "name": "buildForm",
+            "summary": "",
+            "url": "classes/App-Form-TransactionType.html#method_buildForm"
+        },                {
+            "fqsen": "\\App\\Form\\TransactionType\u003A\u003AconfigureOptions\u0028\u0029",
+            "name": "configureOptions",
+            "summary": "",
+            "url": "classes/App-Form-TransactionType.html#method_configureOptions"
+        },                {
             "fqsen": "\\App\\Kernel",
             "name": "Kernel",
             "summary": "",
@@ -605,6 +745,51 @@ Search.appendIndex(
             "name": "__construct",
             "summary": "",
             "url": "classes/App-Repository-BookRepository.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Repository\\TransactionRepository",
+            "name": "TransactionRepository",
+            "summary": "",
+            "url": "classes/App-Repository-TransactionRepository.html"
+        },                {
+            "fqsen": "\\App\\Repository\\TransactionRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Repository-TransactionRepository.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Repository\\TransactionRepository\u003A\u003AfindByTypeAndMonth\u0028\u0029",
+            "name": "findByTypeAndMonth",
+            "summary": "",
+            "url": "classes/App-Repository-TransactionRepository.html#method_findByTypeAndMonth"
+        },                {
+            "fqsen": "\\App\\Repository\\TransactionRepository\u003A\u003AfindByTypeAndYear\u0028\u0029",
+            "name": "findByTypeAndYear",
+            "summary": "",
+            "url": "classes/App-Repository-TransactionRepository.html#method_findByTypeAndYear"
+        },                {
+            "fqsen": "\\App\\Service\\TransactionCalculator",
+            "name": "TransactionCalculator",
+            "summary": "",
+            "url": "classes/App-Service-TransactionCalculator.html"
+        },                {
+            "fqsen": "\\App\\Service\\TransactionCalculator\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Service-TransactionCalculator.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Service\\TransactionCalculator\u003A\u003AcalculateMonthlyAverages\u0028\u0029",
+            "name": "calculateMonthlyAverages",
+            "summary": "",
+            "url": "classes/App-Service-TransactionCalculator.html#method_calculateMonthlyAverages"
+        },                {
+            "fqsen": "\\App\\Service\\TransactionCalculator\u003A\u003AcalculateYearlyAverage\u0028\u0029",
+            "name": "calculateYearlyAverage",
+            "summary": "",
+            "url": "classes/App-Service-TransactionCalculator.html#method_calculateYearlyAverage"
+        },                {
+            "fqsen": "\\App\\Service\\TransactionCalculator\u003A\u003A\u0024transactionRepository",
+            "name": "transactionRepository",
+            "summary": "",
+            "url": "classes/App-Service-TransactionCalculator.html#property_transactionRepository"
         },                {
             "fqsen": "\\",
             "name": "\\",
@@ -631,6 +816,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/app-entity.html"
         },                {
+            "fqsen": "\\App\\Form",
+            "name": "Form",
+            "summary": "",
+            "url": "namespaces/app-form.html"
+        },                {
             "fqsen": "\\App",
             "name": "App",
             "summary": "",
@@ -640,5 +830,10 @@ Search.appendIndex(
             "name": "Repository",
             "summary": "",
             "url": "namespaces/app-repository.html"
+        },                {
+            "fqsen": "\\App\\Service",
+            "name": "Service",
+            "summary": "",
+            "url": "namespaces/app-service.html"
         }            ]
 );

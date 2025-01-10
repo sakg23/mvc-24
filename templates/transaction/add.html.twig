@@ -1,0 +1,15 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Add Transaction{% endblock %}
+
+{% block body %}
+    <div class="transaction-form-page">
+        <h1 class="form-title">Add Transaction</h1>
+        <div class="form-container">
+            {{ form_start(form, { 'attr': { 'class': 'transaction-form' } }) }}
+            {{ form_widget(form) }}
+            <button class="form-submit-btn" type="submit">Save</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

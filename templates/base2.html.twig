@@ -4,12 +4,12 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="{{ asset('img/glider.svg') }}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
         
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
-            <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
-            <link rel="stylesheet" href="{{ asset('styles/footer.css') }}">
-            <link rel="stylesheet" href="{{ asset('styles/navbar.css') }}">
+        
             <link rel="stylesheet" href="{{ asset('styles/project.css') }}">
 
         {% endblock %}
@@ -22,6 +22,7 @@
                 <ul>
                 <li><a href="{{ path('proj') }}">Home</a></li>
                 <li><a href="{{ path('proj_about') }}">About</a></li>
+                <li><a href="{{ path('transaction_averages') }}">Average expenses</a></li>
 
 
                 </ul>
@@ -30,15 +31,28 @@
         <main>{% block body %}{% endblock %}</main>
 
     </body>
-        <footer>
-            {% block footer %}
-                <div style="text-align: center; padding: 1em; background-color: #f3f3f3; border-top: 1px solid #ddd;">
-                    <p>&copy; 2024 Samra</p>
-                    <p>Webbprogramering</p>
-                    <p><a href="https://github.com/sakg23" target="_blank">GitHub</a> | <a href="mailto:sakg23@student.bth.se">Kontakta mig</a></p>
-                </div>
-            {% endblock %}
-        </footer>
+<footer>
+    {% block footer %}
+        <div style="background-color: #f8f9fa; padding: 2em 1em; text-align: center; border-top: 2px solid #ccc;">
+            <div>
+                <p>&copy; 2024 Samra</p>
+                <p>Webbprogrammering</p>
+            </div>
+            <div style="margin-top: 1em;">
+                <a href="https://github.com/sakg23" target="_blank" style="margin-right: 10px; text-decoration: none; color: #333;">
+                    <i class="fab fa-github" style="font-size: 1.5em;"></i>
+                </a>
+                <a href="mailto:sakg23@student.bth.se" style="margin-right: 10px; text-decoration: none; color: #333;">
+                    <i class="fas fa-envelope" style="font-size: 1.5em;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sakg23/" target="_blank" style="text-decoration: none; color: #333;">
+                    <i class="fab fa-linkedin" style="font-size: 1.5em;"></i>
+                </a>
+            </div>
+        </div>
+    {% endblock %}
+</footer>
+
 
 
 </html>

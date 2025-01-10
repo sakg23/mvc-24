@@ -1,0 +1,42 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Transaktionsgenomsnitt{% endblock %}
+
+{% block body %}
+<div class="averages-page">
+    <h2 class="section-title">Månadsgenomsnittliga Transaktioner</h2>
+    
+    <div>
+        <h3 class="average-category-title">Inkomster</h3>
+        <div class="monthly-averages-list">
+            {% for month, average in monthlyIncomeAverages %}
+                <div class="monthly-averages-item">
+                    <span>{{ month }}</span>
+                    {{ average }}:-
+                </div>
+            {% else %}
+                <div class="no-data">Inga inkomsttransaktioner registrerade för detta år.</div>
+            {% endfor %}
+        </div>
+
+        <h3 class="average-category-title">Utgifter</h3>
+        <div class="monthly-averages-list">
+            {% for month, average in monthlyExpenseAverages %}
+                <div class="monthly-averages-item">
+                    <span>{{ month }}</span>
+                    {{ average }}:-
+                </div>
+            {% else %}
+                <div class="no-data">Inga utgiftstransaktioner registrerade för detta år.</div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <h2 class="section-title">Årligt Genomsnittliga Transaktioner</h2>
+    <div class="yearly-averages">
+        <h3 class="average-category-title">Inkomster</h3> {{ yearlyIncomeAverage }}
+        <h3 class="average-category-title">Utgifter</h3> {{ yearlyExpenseAverage }}
+    </div>
+</div>
+{% endblock %}

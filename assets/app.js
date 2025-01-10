@@ -12,6 +12,8 @@
 import './styles/app.css';
 import './styles/footer.css';
 import './styles/navbar.css';
+import './styles/project.css';
+
 
 
 import hello from './js/hello.js';

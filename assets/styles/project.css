@@ -1,0 +1,300 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, div, button, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body and Main */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header.site-header {
+    background: linear-gradient(90deg, #4CAF50, #81C784);
+    color: #fff;
+    padding: 1.5em 2em;
+    text-align: center;
+    border-bottom: 5px solid #388E3C;
+}
+
+header .site-title {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+header nav {
+    margin-top: 1em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    background: #388E3C;
+    color: #f0f0f0;
+}
+
+/* Footer */
+footer {
+    background-color: #4e5052;
+    padding: 2em 1em;
+    text-align: center;
+    border-top: 2px solid #747171;
+}
+
+footer div {
+    margin-top: 1em;
+}
+
+footer a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+footer i {
+    font-size: 1.5em;
+}
+
+
+/* Buttons */
+button, .form-submit-btn, .add-transaction-btn {
+    background: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 0.7em 1.5em;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover, .form-submit-btn:hover, .add-transaction-btn:hover {
+    background: #388E3C;
+}
+
+/* Transaction Page */
+.transaction-page {
+    text-align: center;
+}
+
+.transaction-page .page-title {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 1em;
+}
+
+.transaction-page .add-transaction-btn {
+    display: inline-block;
+    margin-bottom: 1em;
+    text-decoration: none;
+}
+
+.transaction-list {
+    list-style: none;
+    margin-top: 1em;
+    text-align: left;
+}
+
+.transaction-item {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transaction-item .edit-link {
+    color: #4CAF50;
+    text-decoration: none;
+    margin-right: 1em;
+    transition: color 0.3s ease-in-out;
+}
+
+.transaction-item .edit-link:hover {
+    color: #388E3C;
+}
+
+.transaction-item .delete-form {
+    display: inline;
+}
+
+.delete-btn {
+    background: #e53935;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background: #c62828;
+}
+
+/* Forms */
+.transaction-form-page {
+    text-align: center;
+}
+
+.transaction-form-page .form-title {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 1em;
+}
+
+.transaction-form .form-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Averages Page */
+.averages-page {
+    text-align: center;
+}
+
+.averages-page .page-title {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 1em;
+}
+
+.average-category-title {
+    font-size: 1.5em;
+    color: #388E3C;
+    margin-top: 1em;
+}
+
+/* Monthly Averages - Horizontal Layout */
+.monthly-averages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 0;
+}
+
+.monthly-averages-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 120px;
+    font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.monthly-averages-item span {
+    display: block;
+    font-weight: bold;
+    color: #388E3C;
+    margin-bottom: 0.5em;
+}
+
+.no-data {
+    color: #757575;
+}
+
+/* About Page */
+.about-page {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 1em;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 1em;
+}
+
+.feature-list, .tech-list {
+    margin-top: 1em;
+    padding-left: 1.5em;
+}
+
+.feature-list li, .tech-list li {
+    margin: 0.5em 0;
+}
+
+/* Utility Classes */
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+
+.edit-btn {
+    background: #4CAF50; /* Green */
+    color: #ffffff;
+    border: none;
+    padding: 0.7em 1.5em;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-right: 10px;
+}
+
+.edit-btn:hover {
+    background: #388E3C;
+}
+
+.delete-btn {
+    background: #e53935;
+    color: #fff;
+    border: none;
+    padding: 0.7em 1.5em;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+    background: #c62828;
+}
