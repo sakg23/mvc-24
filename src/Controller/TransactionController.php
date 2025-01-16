@@ -6,7 +6,6 @@ use App\Service\TransactionCalculator;
 use App\Entity\Transaction;
 use App\Form\TransactionType;
 use App\Repository\TransactionRepository;
-
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,7 +13,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class TransactionController extends AbstractController
-
 {
     #[Route("/proj", name: "proj", methods: ['GET'])]
     public function home(TransactionRepository $transactionRepository): Response
@@ -83,15 +81,15 @@ class TransactionController extends AbstractController
     public function averages(TransactionCalculator $calculator): Response
     {
         $currentYear = (int) date('Y');
-    
+
         // Get monthly averages for income and expenses
         $monthlyIncomeAverages = $calculator->calculateMonthlyAverages('income', $currentYear);
         $monthlyExpenseAverages = $calculator->calculateMonthlyAverages('expense', $currentYear);
-    
+
         // Get yearly averages for income and expenses
         $yearlyIncomeAverage = $calculator->calculateYearlyAverage('income', $currentYear);
         $yearlyExpenseAverage = $calculator->calculateYearlyAverage('expense', $currentYear);
-    
+
         return $this->render('transaction/average.html.twig', [
             'monthlyIncomeAverages' => $monthlyIncomeAverages,
             'monthlyExpenseAverages' => $monthlyExpenseAverages,
@@ -99,6 +97,6 @@ class TransactionController extends AbstractController
             'yearlyExpenseAverage' => $yearlyExpenseAverage,
         ]);
     }
-    
+
 
 }

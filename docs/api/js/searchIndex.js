@@ -416,21 +416,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-MetricsController.html#method_metrics"
         },                {
-            "fqsen": "\\App\\Controller\\ProjectController",
-            "name": "ProjectController",
-            "summary": "",
-            "url": "classes/App-Controller-ProjectController.html"
-        },                {
-            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Ahome\u0028\u0029",
-            "name": "home",
-            "summary": "",
-            "url": "classes/App-Controller-ProjectController.html#method_home"
-        },                {
-            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aabout\u0028\u0029",
-            "name": "about",
-            "summary": "",
-            "url": "classes/App-Controller-ProjectController.html#method_about"
-        },                {
             "fqsen": "\\App\\Controller\\TransactionController",
             "name": "TransactionController",
             "summary": "",
@@ -786,10 +771,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Service-TransactionCalculator.html#method_calculateYearlyAverage"
         },                {
-            "fqsen": "\\App\\Service\\TransactionCalculator\u003A\u003A\u0024transactionRepository",
-            "name": "transactionRepository",
+            "fqsen": "\\App\\Service\\TransactionCalculator\u003A\u003A\u0024transRepo",
+            "name": "transRepo",
             "summary": "",
-            "url": "classes/App-Service-TransactionCalculator.html#property_transactionRepository"
+            "url": "classes/App-Service-TransactionCalculator.html#property_transRepo"
         },                {
             "fqsen": "\\",
             "name": "\\",
