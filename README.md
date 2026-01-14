@@ -3,7 +3,6 @@
 [![Build Status](https://scrutinizer-ci.com/g/sakg23/mvc-24/badges/build.png?b=main)](https://scrutinizer-ci.com/g/sakg23/mvc-24/?branch=main)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/sakg23/mvc-24/badges/code-intelligence.svg?b=main)](https://scrutinizer-ci.com/g/sakg23/mvc-24/?branch=main)
 
-```markdown
 
 # My Symfony Project
 
@@ -246,7 +245,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 Happy coding! If you have any questions or encounter issues, feel free to open an issue or contact me directly.
-```
+
 
 ---
 
@@ -264,4 +263,5 @@ Happy coding! If you have any questions or encounter issues, feel free to open a
 10. *License*: Specifies the project’s license.
 
 This README.md is designed to give a complete overview of the project, help users get started quickly, and provide clear instructions for installation and usage.
+
 # mvc-24
